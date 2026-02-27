@@ -369,7 +369,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <div className="w-full shrink-0 lg:w-[400px]">
                   <MediaCard
                     alt="Admin configuration panel design"
-                    className="h-[430px] w-full rounded-lg border border-foreground/10 bg-ui-element-bg lg:w-[400px]"
+                    className="h-[220px] w-full rounded-lg border border-foreground/10 bg-ui-element-bg sm:h-[380px] lg:h-[430px] lg:w-[400px]"
                     hoverImageSrc="/assets/media/or-integration/Admin-configuration-panel-design-on-hover.png"
                     imageSrc="/assets/media/or-integration/Admin-configuration-panel-design.png"
                   />
@@ -600,7 +600,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               {/* Role/Outcome Layout */}
               <div className="flex flex-wrap gap-6">
                 {/* My Role - Left aligned, 380px width */}
-                <div className="w-[380px] rounded-lg bg-ui-element-bg p-6 shadow-black/20 shadow-lg">
+                <div className="w-full rounded-lg bg-ui-element-bg p-6 shadow-black/20 shadow-lg sm:w-[380px]">
                   <h3 className="mb-3 font-medium text-[14px] text-foreground/60">
                     {ssT.myRole?.heading}
                   </h3>
@@ -997,7 +997,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 {/* Right: Photo Placeholder */}
                 <MediaCard
                   alt="Longevity Passport platform overview"
-                  className="h-[472px] rounded-lg bg-ui-element-bg shadow-black/20 shadow-lg"
+                  className="h-[220px] rounded-lg bg-ui-element-bg shadow-black/20 shadow-lg sm:h-[380px] lg:h-[472px]"
                   hoverImageSrc="/assets/media/longevity-passport/Longevity-passport-platform-overview-on-hover.png"
                   imageSrc="/assets/media/longevity-passport/Longevity-passport-platform-overview.png"
                 />
@@ -1324,7 +1324,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <div className="flex items-center justify-center">
                   <MediaCard
                     alt="Longevity Passport Section 3 design"
-                    className="h-full w-[calc(100%-100px)] rounded-lg bg-ui-element-bg shadow-black/20 shadow-lg"
+                    className="min-h-[280px] w-full rounded-lg bg-ui-element-bg shadow-black/20 shadow-lg lg:h-full lg:min-h-0 lg:w-[calc(100%-100px)]"
                     imageSrc="/assets/media/main/Longevity-passport-03.png"
                   />
                 </div>
@@ -1398,7 +1398,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <div className="flex items-center justify-start">
                   <MediaCard
                     alt="Longevity Passport Section 5 design"
-                    className="h-full w-[calc(100%-100px)] rounded-lg bg-ui-element-bg shadow-black/20 shadow-lg"
+                    className="min-h-[280px] w-full rounded-lg bg-ui-element-bg shadow-black/20 shadow-lg lg:h-full lg:min-h-0 lg:w-[calc(100%-100px)]"
                     imageSrc="/assets/media/main/Longevity-passport-05.png"
                   />
                 </div>

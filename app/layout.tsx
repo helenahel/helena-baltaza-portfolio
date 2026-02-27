@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Gotu, Montserrat, Pixelify_Sans } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
@@ -44,6 +45,7 @@ export default function RootLayout({
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

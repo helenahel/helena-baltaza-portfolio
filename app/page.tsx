@@ -100,21 +100,21 @@ export default function Home() {
           <p className="mb-6 font-light text-accent-text text-base">
             {t.hero.label}
           </p>
-          <h1 className="font-light text-[22px] text-secondary-text leading-relaxed">
+          <h1 className="font-light text-[18px] text-secondary-text leading-relaxed lg:text-[22px]">
             {t.hero.intro_part1}{" "}
-            <span className="font-display text-[24px] text-foreground">
+            <span className="font-display text-[20px] text-foreground lg:text-[24px]">
               {t.hero.intro_role}
             </span>{" "}
             {t.hero.intro_part2}{" "}
-            <span className="font-display text-[24px] text-foreground">
+            <span className="font-display text-[20px] text-foreground lg:text-[24px]">
               {t.hero.intro_background}
             </span>{" "}
             {t.hero.intro_part3}{" "}
-            <span className="font-display text-[24px] text-foreground">
+            <span className="font-display text-[20px] text-foreground lg:text-[24px]">
               {t.hero.intro_solutions}
             </span>
             {t.hero.intro_part4}{" "}
-            <span className="font-display text-[24px] text-foreground">
+            <span className="font-display text-[20px] text-foreground lg:text-[24px]">
               {t.hero.intro_clients}
             </span>
             {t.hero.intro_part5}
@@ -156,10 +156,10 @@ export default function Home() {
                 <div
                   className={`flex flex-col ${index % 2 !== 0 ? "lg:col-start-2" : ""}`}
                 >
-                  <h3 className="font-display text-[36px] text-foreground">
+                  <h3 className="font-display text-[28px] text-foreground lg:text-[36px]">
                     {project.title}
                   </h3>
-                  <p className="mt-4 whitespace-pre-line font-light text-[18px] text-foreground leading-relaxed">
+                  <p className="mt-4 whitespace-pre-line font-light text-[16px] text-foreground leading-relaxed lg:text-[18px]">
                     {project.description}
                   </p>
                   <div className="mt-20 flex flex-col gap-3">
@@ -171,7 +171,7 @@ export default function Home() {
                           detail.label === t.projects.sevenSprings.keyFocus ||
                           detail.label === t.projects.orIntegration.keyFocus
                             ? "flex flex-col gap-2"
-                            : "flex flex-wrap items-center gap-2 font-light text-[18px] text-foreground"
+                            : "flex flex-wrap items-center gap-2 font-light text-[16px] text-foreground lg:text-[18px]"
                         }
                         key={detail.label}
                       >
@@ -181,7 +181,7 @@ export default function Home() {
                               t.projects.longevityPassport.keyFocus ||
                             detail.label === t.projects.sevenSprings.keyFocus ||
                             detail.label === t.projects.orIntegration.keyFocus
-                              ? "font-light text-[18px] text-foreground"
+                              ? "font-light text-[16px] text-foreground lg:text-[18px]"
                               : "shrink-0"
                           }
                         >
@@ -210,7 +210,7 @@ export default function Home() {
                     ))}
                   </div>
                   <a
-                    className="group mt-8 inline-flex items-center gap-2 font-medium text-[18px] text-foreground transition-colors hover:text-foreground/80"
+                    className="group mt-8 inline-flex items-center gap-2 font-medium text-[16px] text-foreground transition-colors hover:text-foreground/80 lg:text-[18px]"
                     href={`/projects/${project.slug}`}
                   >
                     {t.projects.explore}

@@ -33,7 +33,7 @@ export function ParallaxText({ children }: { children: React.ReactNode }) {
 
   return (
     <p
-      className="parallax-text mx-auto max-w-4xl whitespace-nowrap font-display text-[64px] text-accent-text leading-tight"
+      className="parallax-text mx-auto max-w-4xl font-display text-[32px] text-accent-text leading-tight sm:text-[48px] lg:text-[64px]"
       ref={textRef}
     >
       {children}

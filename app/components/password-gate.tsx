@@ -57,20 +57,20 @@ export default function PasswordGate({
       </Link>
 
       <div className="flex min-h-[calc(100vh-80px)] items-center justify-center px-4">
-        <div className="space-y-8">
+        <div className="w-full max-w-sm space-y-8">
           <div className="space-y-3 text-center">
-            <h1 className="whitespace-nowrap font-medium font-sans text-3xl">
+            <h1 className="font-medium font-sans text-xl sm:text-3xl">
               Ups, you'll need a <span className="font-display">password</span>{" "}
               here.
             </h1>
-            <p className="text-foreground/70 text-lg">
+            <p className="text-base text-foreground/70 sm:text-lg">
               <span className="font-display">Contact me</span>
               <span className="font-sans"> to access this page's content.</span>
             </p>
           </div>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="flex gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <div className="relative flex-1">
                 <input
                   autoFocus
