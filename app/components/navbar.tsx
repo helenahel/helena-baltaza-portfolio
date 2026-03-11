@@ -14,7 +14,7 @@ export function Navbar() {
     { label: t.navbar.about, href: "/#about" },
     {
       label: t.navbar.cv,
-      href: "https://drive.google.com/file/d/1EsFzrpFbfArwxXRZsQtnVhN4N9qKWf03/view?usp=sharing",
+      href: "/assets/cv.pdf",
       external: true,
     },
   ];
