@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
 :root {
+  --background: #d4dff5;
+  --background-end: #d4dff5;
+  --foreground: #14151c;
+  --secondary-text: #1b1e33;
+  --color-accent-text: #0b2b5f;
+  --separator: rgba(20, 21, 28, 0.08);
+  --ui-element-bg: rgba(153, 175, 211, 0.1);
+  --ui-element-border: #a8bddb;
+  --frame-bg: #fcfbf8;
+}
+
+[data-theme="dark"] {
   --background: #0c0a00;
   --background-end: #0c0a00;
   --foreground: #eaeff7;
@@ -8,17 +20,8 @@
   --color-accent-text: #99afd3;
   --separator: rgba(234, 239, 247, 0.08);
   --ui-element-bg: rgba(83, 125, 204, 0.2);
-  --ui-element-border: rgba(83, 125, 204, 0.2);
-}
-
-[data-theme="light"] {
-  --background: #d4dff5;
-  --foreground: #14151c;
-  --secondary-text: #1b1e33;
-  --color-accent-text: #0b2b5f;
-  --separator: rgba(20, 21, 28, 0.08);
-  --ui-element-bg: rgba(153, 175, 211, 0.1);
-  --ui-element-border: #a8bddb;
+  --ui-element-border: rgba(83, 125, 204, 0.6);
+  --frame-bg: #191d22;
 }
 
 @theme inline {
@@ -29,6 +32,7 @@
   --color-separator: var(--separator);
   --color-ui-element-bg: var(--ui-element-bg);
   --color-ui-element-border: var(--ui-element-border);
+  --color-frame-bg: var(--frame-bg);
   --font-sans: var(--font-montserrat);
   --font-display: var(--font-gotu);
 }
@@ -66,26 +70,26 @@ body::before {
   pointer-events: none;
   background: radial-gradient(
     ellipse at 50% 40%,
-    rgba(255, 255, 255, 0.015) 0%,
-    transparent 70%
-  );
-}
-
-[data-theme="light"] body::before {
-  background: radial-gradient(
-    ellipse at 50% 40%,
     rgba(0, 0, 0, 0.02) 0%,
     transparent 70%
   );
 }
 
-[data-theme="light"] .shadow-lg {
+[data-theme="dark"] body::before {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    rgba(255, 255, 255, 0.015) 0%,
+    transparent 70%
+  );
+}
+
+.shadow-lg {
   box-shadow:
     0 10px 20px -3px rgb(17 17 43 / 0.05),
     0 4px 6px -4px rgb(17 17 43 / 0.05);
 }
 
-[data-theme="light"] .shadow-xl {
+.shadow-xl {
   box-shadow:
     0 20px 25px -5px rgb(17 17 43 / 0.05),
     0 8px 10px -6px rgb(17 17 43 / 0.05);
@@ -109,4 +113,30 @@ body::before {
   to {
     opacity: 0;
   }
+}
+
+/* Animated gradient border on hover */
+.btn-hover-border {
+  isolation: isolate;
+}
+
+.btn-hover-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #a8bddb, #537dcc, #6480b8);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.btn-hover-border:hover::before {
+  opacity: 1;
 }

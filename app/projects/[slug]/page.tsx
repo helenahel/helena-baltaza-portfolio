@@ -78,34 +78,36 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </Link>
 
           {/* Hero Section */}
-          <section className="px-6 pt-32 pb-16 sm:px-12 lg:px-24 lg:pt-40">
-            <div className="mx-auto w-full max-w-6xl">
-              {/* Tags */}
-              <div className="mb-8 flex flex-wrap gap-2">
-                {orT.tags?.map((tag: string) => (
-                  <span
-                    className="rounded-full border border-foreground/15 px-3 py-1 font-light text-[14px]"
-                    key={tag}
-                  >
-                    {tag}
-                  </span>
-                ))}
+          <div className="mx-[80px] mt-4 rounded-[60px]">
+            <section className="px-12 pt-32 pb-16 lg:px-20 lg:pt-40">
+              <div className="mx-auto w-full max-w-6xl">
+                {/* Tags */}
+                <div className="mb-8 flex flex-wrap gap-2">
+                  {orT.tags?.map((tag: string) => (
+                    <span
+                      className="rounded-full border-[0.5px] border-ui-element-border px-3 py-1 font-light text-[14px]"
+                      key={tag}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Title */}
+                <h1 className="mb-6 font-display text-[48px] text-foreground leading-tight lg:text-[64px]">
+                  {orT.hero?.title}
+                </h1>
+
+                {/* Subtitle */}
+                <p className="font-light text-[18px] text-foreground/80 lg:text-[20px]">
+                  {orT.hero?.subtitle}
+                </p>
               </div>
-
-              {/* Title */}
-              <h1 className="mb-6 font-display text-[48px] text-foreground leading-tight lg:text-[64px]">
-                {orT.hero?.title}
-              </h1>
-
-              {/* Subtitle */}
-              <p className="font-light text-[18px] text-foreground/80 lg:text-[20px]">
-                {orT.hero?.subtitle}
-              </p>
-            </div>
-          </section>
+            </section>
+          </div>
 
           {/* Quick Stats Grid */}
-          <section className="px-6 py-16 sm:px-12 lg:px-24">
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <div className="mx-auto w-full max-w-6xl space-y-16">
               {/* The Challenge */}
               <div>
@@ -167,19 +169,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
               </div>
             </div>
-          </section>
+          </div>
 
-          {/* Main Content Sections */}
-          <div className="space-y-32 px-6 py-16 sm:px-12 lg:px-24">
-            {/* Phase 1 */}
+          {/* Phase 1 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {orT.phase1?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {orT.phase1?.title}
               </h2>
 
@@ -267,16 +262,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Phase 2 */}
+          {/* Phase 2 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {orT.phase2?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {orT.phase2?.title}
               </h2>
 
@@ -376,16 +367,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Phase 3 */}
+          {/* Phase 3 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {orT.phase3?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {orT.phase3?.title}
               </h2>
 
@@ -449,7 +436,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Navigation Footer */}
-          <section className="border-separator border-t px-6 py-16 sm:px-12 lg:px-24">
+          <section className="px-6 py-16 sm:px-12 lg:px-24">
             <div className="mx-auto w-full max-w-6xl">
               <h3 className="mb-8 font-display text-[24px] text-foreground">
                 {common.moreProjects}
@@ -457,7 +444,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <div className="grid gap-8 sm:grid-cols-2">
                 {otherProjects.map((proj) => (
                   <Link
-                    className="group rounded-xl bg-ui-element-bg p-6 shadow-black/20 shadow-lg transition-shadow hover:shadow-black/30 hover:shadow-xl"
+                    className="group rounded-xl bg-frame-bg p-6 shadow-black/20 shadow-lg transition-shadow hover:shadow-black/30 hover:shadow-xl"
                     href={`/projects/${proj.slug}`}
                     key={proj.slug}
                   >
@@ -483,26 +470,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 ))}
               </div>
 
-              <div className="mt-12 text-center">
-                <Link
-                  className="inline-flex items-center gap-2 font-medium text-foreground/60 transition-colors hover:text-foreground"
-                  href="/#projects"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19 12H5M12 19l-7-7 7-7" />
-                  </svg>
-                  {common.viewAllProjects}
-                </Link>
-              </div>
             </div>
           </section>
 
@@ -558,34 +525,36 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </Link>
 
           {/* Hero Section */}
-          <section className="px-6 pt-32 pb-16 sm:px-12 lg:px-24 lg:pt-40">
-            <div className="mx-auto w-full max-w-6xl">
-              {/* Tags */}
-              <div className="mb-8 flex flex-wrap gap-2">
-                {ssT.tags?.map((tag: string) => (
-                  <span
-                    className="rounded-full border border-foreground/15 px-3 py-1 font-light text-[14px]"
-                    key={tag}
-                  >
-                    {tag}
-                  </span>
-                ))}
+          <div className="mx-[80px] mt-4 rounded-[60px]">
+            <section className="px-12 pt-32 pb-16 lg:px-20 lg:pt-40">
+              <div className="mx-auto w-full max-w-6xl">
+                {/* Tags */}
+                <div className="mb-8 flex flex-wrap gap-2">
+                  {ssT.tags?.map((tag: string) => (
+                    <span
+                      className="rounded-full border-[0.5px] border-ui-element-border px-3 py-1 font-light text-[14px]"
+                      key={tag}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Title */}
+                <h1 className="mb-6 font-display text-[48px] text-foreground leading-tight lg:text-[64px]">
+                  {ssT.hero?.title}
+                </h1>
+
+                {/* Subtitle */}
+                <p className="font-light text-[18px] text-foreground/80 lg:text-[20px]">
+                  {ssT.hero?.subtitle}
+                </p>
               </div>
-
-              {/* Title */}
-              <h1 className="mb-6 font-display text-[48px] text-foreground leading-tight lg:text-[64px]">
-                {ssT.hero?.title}
-              </h1>
-
-              {/* Subtitle */}
-              <p className="font-light text-[18px] text-foreground/80 lg:text-[20px]">
-                {ssT.hero?.subtitle}
-              </p>
-            </div>
-          </section>
+            </section>
+          </div>
 
           {/* Quick Stats Grid */}
-          <section className="px-6 py-16 sm:px-12 lg:px-24">
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <div className="mx-auto w-full max-w-6xl space-y-16">
               {/* The Challenge */}
               <div>
@@ -620,19 +589,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
 
-          {/* Main Content Sections */}
-          <div className="space-y-32 px-6 py-16 sm:px-12 lg:px-24">
-            {/* Section 1 */}
+          {/* Section 1 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {ssT.section1?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {ssT.section1?.title}
               </h2>
 
@@ -705,16 +667,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Section 2 */}
+          {/* Section 2 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {ssT.section2?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {ssT.section2?.title}
               </h2>
 
@@ -738,16 +696,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Section 3 */}
+          {/* Section 3 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {ssT.section3?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {ssT.section3?.title}
               </h2>
 
@@ -801,16 +755,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Section 4 */}
+          {/* Section 4 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {ssT.section4?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {ssT.section4?.title}
               </h2>
 
@@ -821,7 +771,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Navigation Footer */}
-          <section className="border-separator border-t px-6 py-16 sm:px-12 lg:px-24">
+          <section className="px-6 py-16 sm:px-12 lg:px-24">
             <div className="mx-auto w-full max-w-6xl">
               <h3 className="mb-8 font-display text-[24px] text-foreground">
                 {common.moreProjects}
@@ -829,7 +779,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <div className="grid gap-8 sm:grid-cols-2">
                 {otherProjects.map((proj) => (
                   <Link
-                    className="group rounded-xl bg-ui-element-bg p-6 shadow-black/20 shadow-lg transition-shadow hover:shadow-black/30 hover:shadow-xl"
+                    className="group rounded-xl bg-frame-bg p-6 shadow-black/20 shadow-lg transition-shadow hover:shadow-black/30 hover:shadow-xl"
                     href={`/projects/${proj.slug}`}
                     key={proj.slug}
                   >
@@ -855,26 +805,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 ))}
               </div>
 
-              <div className="mt-12 text-center">
-                <Link
-                  className="inline-flex items-center gap-2 font-medium text-foreground/60 transition-colors hover:text-foreground"
-                  href="/#projects"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19 12H5M12 19l-7-7 7-7" />
-                  </svg>
-                  {common.viewAllProjects}
-                </Link>
-              </div>
             </div>
           </section>
 
@@ -930,34 +860,36 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </Link>
 
           {/* Hero Section */}
-          <section className="px-6 pt-32 pb-16 sm:px-12 lg:px-24 lg:pt-40">
-            <div className="mx-auto w-full max-w-6xl">
-              {/* Tags */}
-              <div className="mb-8 flex flex-wrap gap-2">
-                {lpT.tags?.map((tag: string) => (
-                  <span
-                    className="rounded-full border border-foreground/15 px-3 py-1 font-light text-[14px]"
-                    key={tag}
-                  >
-                    {tag}
-                  </span>
-                ))}
+          <div className="mx-[80px] mt-4 rounded-[60px]">
+            <section className="px-12 pt-32 pb-16 lg:px-20 lg:pt-40">
+              <div className="mx-auto w-full max-w-6xl">
+                {/* Tags */}
+                <div className="mb-8 flex flex-wrap gap-2">
+                  {lpT.tags?.map((tag: string) => (
+                    <span
+                      className="rounded-full border-[0.5px] border-ui-element-border px-3 py-1 font-light text-[14px]"
+                      key={tag}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Title */}
+                <h1 className="mb-6 font-display text-[48px] text-foreground leading-tight lg:text-[64px]">
+                  {lpT.hero?.title}
+                </h1>
+
+                {/* Subtitle */}
+                <p className="font-light text-[18px] text-foreground/80 lg:text-[20px]">
+                  {lpT.hero?.subtitle}
+                </p>
               </div>
-
-              {/* Title */}
-              <h1 className="mb-6 font-display text-[48px] text-foreground leading-tight lg:text-[64px]">
-                {lpT.hero?.title}
-              </h1>
-
-              {/* Subtitle */}
-              <p className="font-light text-[18px] text-foreground/80 lg:text-[20px]">
-                {lpT.hero?.subtitle}
-              </p>
-            </div>
-          </section>
+            </section>
+          </div>
 
           {/* Quick Stats Grid */}
-          <section className="px-6 py-16 sm:px-12 lg:px-24">
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <div className="mx-auto w-full max-w-6xl space-y-16">
               {/* The Challenge */}
               <div>
@@ -1003,10 +935,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
               </div>
             </div>
-          </section>
+          </div>
 
           {/* Impact Section */}
-          <section className="px-6 py-16 sm:px-12 lg:px-24">
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <div className="mx-auto w-full max-w-6xl">
               <h3 className="mb-4 font-medium text-[14px] text-foreground/60 tracking-wide">
                 {lpT.impact?.heading}
@@ -1042,29 +974,13 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
 
-          {/* Main Content Sections */}
-          <div className="space-y-32 px-6 py-16 sm:px-12 lg:px-24">
-            {/* Section 1 */}
+          {/* Section 1 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
               {/* Impact Video */}
-              <video
-                autoPlay
-                className="mb-8 w-full rounded-lg shadow-black/20 shadow-lg"
-                loop
-                muted
-                playsInline
-                src="/assets/media/longevity-passport/the-impact.mp4"
-              />
-
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {lpT.section1?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {lpT.section1?.title}
               </h2>
 
@@ -1103,16 +1019,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Section 2 */}
+          {/* Section 2 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {lpT.section2?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {lpT.section2?.title}
               </h2>
 
@@ -1213,16 +1125,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Section 3 */}
+          {/* Section 3 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {lpT.section3?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {lpT.section3?.title}
               </h2>
 
@@ -1330,16 +1238,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Section 4 */}
+          {/* Section 4 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {lpT.section4?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {lpT.section4?.title}
               </h2>
 
@@ -1380,16 +1284,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 </div>
               </div>
             </section>
+          </div>
 
-            {/* Section 5 */}
+          {/* Section 5 */}
+          <div className="mx-[80px] mt-4 rounded-[60px] bg-frame-bg px-12 py-16 lg:px-20">
             <section className="mx-auto w-full max-w-6xl">
-              <div className="mb-8 flex items-center gap-4">
-                <span className="font-display text-[18px] text-foreground/40">
-                  {lpT.section5?.number}
-                </span>
-                <hr className="h-px flex-1 border-0 bg-accent-text/30" />
-              </div>
-              <h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
+<h2 className="mb-12 font-display text-[32px] text-foreground lg:text-[42px]">
                 {lpT.section5?.title}
               </h2>
 
@@ -1428,7 +1328,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Navigation Footer */}
-          <section className="border-separator border-t px-6 py-16 sm:px-12 lg:px-24">
+          <section className="px-6 py-16 sm:px-12 lg:px-24">
             <div className="mx-auto w-full max-w-6xl">
               <h3 className="mb-8 font-display text-[24px] text-foreground">
                 {common.moreProjects}
@@ -1436,7 +1336,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <div className="grid gap-8 sm:grid-cols-2">
                 {otherProjects.map((proj) => (
                   <Link
-                    className="group rounded-xl bg-ui-element-bg p-6 shadow-black/20 shadow-lg transition-shadow hover:shadow-black/30 hover:shadow-xl"
+                    className="group rounded-xl bg-frame-bg p-6 shadow-black/20 shadow-lg transition-shadow hover:shadow-black/30 hover:shadow-xl"
                     href={`/projects/${proj.slug}`}
                     key={proj.slug}
                   >
@@ -1462,26 +1362,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 ))}
               </div>
 
-              <div className="mt-12 text-center">
-                <Link
-                  className="inline-flex items-center gap-2 font-medium text-foreground/60 transition-colors hover:text-foreground"
-                  href="/#projects"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M19 12H5M12 19l-7-7 7-7" />
-                  </svg>
-                  {common.viewAllProjects}
-                </Link>
-              </div>
             </div>
           </section>
 

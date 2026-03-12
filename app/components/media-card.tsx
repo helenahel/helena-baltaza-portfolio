@@ -37,7 +37,7 @@ export function MediaCard({
 
   // IntersectionObserver for lazy loading hover media
   useEffect(() => {
-    if (isTouchDevice) {
+    if (isTouchDevice || (!isVideoTransition && !isImageTransition)) {
       return;
     }
 
@@ -112,7 +112,7 @@ export function MediaCard({
       {/* biome-ignore lint/correctness/useImageSize: Using CSS dimensions h-full w-full */}
       <img
         alt={alt}
-        className={`h-full w-full object-cover transition-opacity duration-700 ${showHoverMedia ? "opacity-0" : "opacity-100"}`}
+        className={`h-full w-full object-cover ${isVideoTransition || isImageTransition ? `transition-opacity duration-700 ${showHoverMedia ? "opacity-0" : "opacity-100"}` : ""}`}
         loading={priority ? "eager" : "lazy"}
         src={imageSrc}
       />

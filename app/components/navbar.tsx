@@ -22,7 +22,9 @@ export function Navbar() {
   // Close on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setIsOpen(false);
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
@@ -50,7 +52,7 @@ export function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 z-50 flex w-full items-center justify-between bg-background/80 px-6 py-4 backdrop-blur-md sm:px-12 lg:grid lg:grid-cols-[1fr_auto_1fr]"
+        className="mx-[40px] mt-4 flex h-[76px] items-center justify-between rounded-[200px] bg-frame-bg px-8 lg:grid lg:grid-cols-[1fr_auto_1fr]"
         ref={navRef}
       >
         <a className="flex flex-col" href="/#hero">
@@ -61,11 +63,11 @@ export function Navbar() {
             {t.navbar.role}
           </span>
         </a>
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="hidden items-center gap-[60px] lg:flex">
           {navLinks.map((link) => (
             <li key={link.href + link.label}>
               <a
-                className="group relative font-light text-[16px] text-foreground"
+                className="btn-hover-border relative flex items-center rounded-[200px] bg-ui-element-border/0 px-5 py-1.5 font-light text-[16px] text-secondary-text transition-colors hover:text-foreground"
                 href={link.href}
                 {...(link.external
                   ? {
@@ -74,10 +76,7 @@ export function Navbar() {
                     }
                   : {})}
               >
-                <span className="inline-block transition-transform group-hover:-translate-y-0.5">
-                  {link.label}
-                </span>
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-foreground transition-all group-hover:w-full" />
+                {link.label}
               </a>
             </li>
           ))}

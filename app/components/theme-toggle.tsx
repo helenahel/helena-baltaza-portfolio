@@ -17,7 +17,7 @@ export function ThemeToggle() {
   }, [showMessage]);
 
   return (
-    <>
+    <div className="relative inline-flex items-center">
       <button
         aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
         className="text-foreground/70 transition-colors hover:text-foreground"
@@ -70,8 +70,10 @@ export function ThemeToggle() {
       </button>
       {showMessage && (
         <div
-          className="pointer-events-none fixed top-14 right-6 z-[60] font-[family-name:var(--font-pixelify)] text-[14px] text-foreground"
+          className="pointer-events-none absolute z-[60] whitespace-nowrap font-[family-name:var(--font-pixelify)] text-[14px] text-foreground"
           style={{
+            right: "calc(100% + 8px)",
+            top: "calc(50% - 8px)",
             animation:
               "popUp 0.15s ease-out forwards, fadeOut 0.2s ease-in 0.6s forwards",
           }}
@@ -79,6 +81,6 @@ export function ThemeToggle() {
           Team dark mode!
         </div>
       )}
-    </>
+    </div>
   );
 }
